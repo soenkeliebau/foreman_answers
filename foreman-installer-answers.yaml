@@ -1,0 +1,148 @@
+# Format:
+# <classname>: false - don't include this class
+# <classname>: true - include and use the defaults
+# <classname>:
+#   <param>: <value> - include and override the default(s)
+#
+# See params.pp in each class for what options are available
+
+--- 
+  "foreman::compute::rackspace": false
+  "foreman::plugin::discovery": false
+  puppet: false
+  "foreman::plugin::hooks": false
+  foreman: 
+    organizations_enabled: false
+    group: foreman
+    db_password: wUtZMujP59Qib22kReL2d8NmgoGXcTZ9
+    oauth_consumer_key: f7vGcS6cAewLoSJchJDVqHaqQ9TDd7aV
+    oauth_active: true
+    db_username: foreman
+    db_manage: true
+    user_groups: 
+      - puppet
+    configure_scl_repo: true
+    use_vhost: true
+    passenger_scl: ruby193
+    server_ssl_key: /var/lib/puppet/ssl/private_keys/master.cluster.pem
+    db_sslmode: 
+    custom_repo: true
+    authentication: true
+    user: foreman
+    selinux: 
+    repo: stable
+    oauth_map_users: true
+    server_ssl_cert: /var/lib/puppet/ssl/certs/master.cluster.pem
+    passenger_interface: ""
+    puppet_home: /var/lib/puppet
+    db_adapter: 
+    oauth_consumer_secret: jiqAct4oFyh2x7jZW9nT2nAQSkXwifHD
+    gpgcheck: true
+    passenger: true
+    unattended: true
+    server_ssl_chain: /var/lib/puppet/ssl/certs/ca.pem
+    app_root: /usr/share/foreman
+    db_database: 
+    db_type: postgresql
+    server_ssl_ca: /var/lib/puppet/ssl/certs/ca.pem
+    locations_enabled: false
+    db_port: 
+    version: present
+    foreman_url: "https://master.cluster"
+    environment: production
+    db_host: 
+    configure_epel_repo: true
+    ssl: false
+  "foreman::compute::libvirt": false
+  "foreman::plugin::chef": false
+  "foreman::plugin::puppetdb": false
+  "foreman::plugin::bootdisk": false
+  "foreman::compute::openstack": false
+  "foreman::plugin::setup": {}
+  "foreman::plugin::default_hostgroup": false
+  "foreman::compute::vmware": false
+  "foreman::compute::ec2": false
+  "foreman::compute::ovirt": false
+  "foreman::compute::gce": false
+  "foreman::plugin::templates": false
+  foreman_proxy: 
+    dns_tsig_principal: "foremanproxy/master.cluster@CLUSTER"
+    puppetssh_sudo: false
+    dhcp_managed: true
+    ssl_ca: /var/lib/puppet/ssl/certs/ca.pem
+    realm_principal: "realm-proxy@EXAMPLE.COM"
+    dhcp_config: /etc/dhcp/dhcpd.conf
+    tftp_root: /var/lib/tftpboot/
+    puppetssh_command: "/usr/bin/puppet agent --onetime --no-usecacheonfailure"
+    custom_repo: true
+    tftp_syslinux_root: /usr/share/syslinux
+    tftp_syslinux_files: 
+      - pxelinux.0
+      - menu.c32
+      - chain.c32
+      - memdisk
+    user: foreman-proxy
+    puppetrun_provider: ""
+    realm_provider: freeipa
+    puppet_user: root
+    puppetrun_cmd: /usr/sbin/puppetrun
+    dhcp_range: false
+    freeipa_remove_dns: true
+    gpgcheck: true
+    ssl_key: /var/lib/puppet/ssl/private_keys/master.cluster.pem
+    puppetssh_keyfile: /etc/foreman-proxy/id_rsa
+    puppetssh_user: root
+    dns_reverse: "100.168.192.in-addr.arpa"
+    tftp: true
+    puppetca: true
+    dns_zone: cluster
+    bmc: false
+    puppetca_cmd: /usr/sbin/puppetca
+    dhcp: false
+    realm_keytab: /etc/foreman-proxy/freeipa.keytab
+    autosign_location: /etc/puppet/autosign.conf
+    registered_name: master.cluster
+    oauth_consumer_secret: jiqAct4oFyh2x7jZW9nT2nAQSkXwifHD
+    bmc_default_provider: ipmitool
+    dir: /usr/share/foreman-proxy
+    customrun_args: "-ay -f -s"
+    dns: false
+    oauth_effective_user: admin
+    foreman_base_url: "https://master.cluster"
+    dns_tsig_keytab: /etc/foreman-proxy/dns.keytab
+    dns_interface: eth0
+    tftp_dirs: 
+      - /var/lib/tftpboot//pxelinux.cfg
+      - /var/lib/tftpboot//boot
+    dhcp_key_secret: ""
+    virsh_network: default
+    dns_server: "127.0.0.1"
+    oauth_consumer_key: f7vGcS6cAewLoSJchJDVqHaqQ9TDd7aV
+    dhcp_key_name: ""
+    repo: stable
+    tftp_servername: "10.0.2.15"
+    dhcp_vendor: isc
+    dns_ttl: "86400"
+    log: /var/log/foreman-proxy/proxy.log
+    puppetdir: /etc/puppet
+    dhcp_interface: eth0
+    dhcp_leases: /var/lib/dhcpd/dhcpd.leases
+    customrun_cmd: /bin/false
+    dns_managed: true
+    ssl: false
+    dns_provider: nsupdate
+    keyfile: /etc/rndc.key
+    puppet_group: puppet
+    dhcp_gateway: "192.168.100.1"
+    ssl_cert: /var/lib/puppet/ssl/certs/master.cluster.pem
+    dns_forwarders: []
+    register_in_foreman: true
+    ssldir: /var/lib/puppet/ssl
+    realm: false
+    registered_proxy_url: "https://master.cluster:8443"
+    trusted_hosts: []
+    use_sudoersd: true
+    manage_sudoersd: true
+    puppetrun: true
+    port: 8443
+    dhcp_nameservers: default
